@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import DifferenceSection from "@/components/DifferenceSection";
+import WhoForSection from "@/components/WhoForSection";
+import TrainingSection from "@/components/TrainingSection";
+import ContactSection from "@/components/ContactSection";
+import ConfidenceSection from "@/components/ConfidenceSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <DifferenceSection />
+      <WhoForSection />
+      <TrainingSection />
+      <ContactSection />
+      <ConfidenceSection />
+
+      <footer className="py-6 text-center text-muted-foreground text-sm border-t border-border">
+        <p>© 2026 LS Street MMA. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
