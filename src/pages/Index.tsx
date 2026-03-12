@@ -10,6 +10,9 @@ import ConfidenceSection from "@/components/ConfidenceSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <div className="w-full">
+        <img src={banner} alt="LS Street MMA Self Defense" className="w-full h-auto object-cover" />
+      </div>
       <Navbar />
       <HeroSection />
       <AboutSection />
