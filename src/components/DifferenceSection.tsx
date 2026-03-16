@@ -1,31 +1,11 @@
-import { X, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 const items = [
-  {
-    icon: "x",
-    title: "Not Sport",
-    desc: "No rules. No referees. No points.",
-  },
-  {
-    icon: "x",
-    title: "Not Flashy Techniques",
-    desc: "If it looks impressive but won't work under stress — we don't teach it.",
-  },
-  {
-    icon: "x",
-    title: "Not Fantasy Moves",
-    desc: "No unrealistic drills. No cinematic nonsense.",
-  },
-  {
-    icon: "check",
-    title: "Real-World Self Defence",
-    desc: "Practical skills for real-life situations.",
-  },
-  {
-    icon: "check",
-    title: "1–2–1 Coaching",
-    desc: "Private, focused sessions tailored to you.",
-  },
+  { title: "Not Sport", desc: "No rules. No referees. No points." },
+  { title: "Not Flashy Techniques", desc: "If it looks impressive but won't work under stress — we don't teach it." },
+  { title: "Not Fantasy Moves", desc: "No unrealistic drills. No cinematic nonsense." },
+  { title: "Real-World Self Defence", desc: "Practical skills for real-life situations." },
+  { title: "1–2–1 Coaching", desc: "Private, focused sessions tailored to you." },
 ];
 
 const DifferenceSection = () => {
