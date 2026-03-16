@@ -23,15 +23,9 @@ const DifferenceSection = () => {
               className="bg-card border border-border rounded p-6 hover:border-primary/40 transition-colors"
             >
               <div className="flex items-center gap-3 mb-3">
-                {item.icon === "x" ? (
-                  <span className="bg-destructive/20 p-1.5 rounded-full">
-                    <X className="text-destructive" size={16} />
-                  </span>
-                ) : (
-                  <span className="bg-primary/20 p-1.5 rounded-full">
-                    <Check className="text-primary" size={16} />
-                  </span>
-                )}
+                <span className="bg-green-500/20 p-1.5 rounded-full">
+                  <Check className="text-green-500" size={16} />
+                </span>
                 <h3 className="font-heading text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>
