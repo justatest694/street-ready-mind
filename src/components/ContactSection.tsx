@@ -1,4 +1,4 @@
-import { Phone, MapPin, Instagram } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -22,14 +22,6 @@ const ContactSection = () => {
           <div className="flex items-center gap-2">
             <Phone size={16} className="text-primary" />
             <span>Call / WhatsApp: 000-000-0000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <MapPin size={16} className="text-primary" />
-            <span>Location: Your Area</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Instagram size={16} className="text-primary" />
-            <span>@username</span>
           </div>
         </div>
       </div>
