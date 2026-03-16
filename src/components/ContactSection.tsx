@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
