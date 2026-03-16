@@ -32,7 +32,7 @@ const HeroSection = () => {
         </a>
 
         <p className="text-muted-foreground text-sm mt-4 tracking-wide">
-          Private Coaching · Beginners Welcome
+          Private Coaching · First Session Free · Beginners Welcome
         </p>
       </div>
     </section>
