@@ -3,8 +3,8 @@ import banner from "@/assets/banner.jpg";
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="w-full">
-        <img src={banner} alt="LS Street MMA" className="w-full h-auto object-contain" />
+      <div className="container mx-auto flex items-center justify-center py-2 px-4">
+        <img src={banner} alt="LS Street MMA" className="h-20 w-auto" />
       </div>
     </nav>
   );
