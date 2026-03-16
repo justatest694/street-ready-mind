@@ -16,8 +16,8 @@ const Index = () => {
       <DifferenceSection />
       <WhoForSection />
       <TrainingSection />
-      <ContactSection />
       <ConfidenceSection />
+      <ContactSection />
 
       <footer className="py-6 text-center text-muted-foreground text-sm border-t border-border">
         <p>© 2026 LS Street MMA. All rights reserved.</p>
