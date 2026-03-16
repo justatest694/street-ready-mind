@@ -23,6 +23,10 @@ const ContactSection = () => {
             <Phone size={16} className="text-primary" />
             <span>Call / WhatsApp: 000-000-0000</span>
           </div>
+          <div className="flex items-center gap-2">
+            <Mail size={16} className="text-primary" />
+            <span>Email: email@</span>
+          </div>
         </div>
       </div>
     </section>
