@@ -9,6 +9,12 @@ const ContactSection = () => {
   const [sending, setSending] = useState(false);
   const { toast } = useToast();
 
+  useEffect(() => {
+    const handler = () => setShowForm(true);
+    window.addEventListener('open-contact-form', handler);
+    return () => window.removeEventListener('open-contact-form', handler);
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
