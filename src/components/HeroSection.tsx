@@ -1,6 +1,41 @@
+import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [sending, setSending] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mzdkkpgl", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        toast({ title: "Message sent!", description: "We'll get back to you soon." });
+        form.reset();
+        setShowForm(false);
+      } else {
+        toast({ title: "Failed to send", description: "Please try again.", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Network error", description: "Please try again.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section
       id="home"
@@ -24,15 +59,41 @@ const HeroSection = () => {
           real-life situations — not sport, not fantasy.
         </p>
 
-        <button
-          onClick={() => {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            window.dispatchEvent(new CustomEvent('open-contact-form'));
-          }}
-          className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
-        >
-          BOOK YOUR SESSION
-        </button>
+        {!showForm ? (
+          <button
+            onClick={() => setShowForm(true)}
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+          >
+            BOOK YOUR SESSION
+          </button>
+        ) : (
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mb-4 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
+            <h3 className="font-heading text-xl font-bold text-foreground">Send Us a Message</h3>
+            <Input name="name" placeholder="Your Name" required className="bg-background" />
+            <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
+            <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t border-border">
+              <Mail size={14} className="text-primary" />
+              <span>This will be sent to: email@</span>
+            </div>
+            <div className="flex gap-3">
+              <button
+                type="submit"
+                disabled={sending}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading tracking-widest px-8 py-3 rounded transition-all glow-orange hover:scale-105 disabled:opacity-50"
+              >
+                {sending ? "SENDING..." : "SEND"}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowForm(false)}
+                className="border border-border text-muted-foreground hover:text-foreground px-6 py-3 rounded transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        )}
 
         <p className="text-muted-foreground text-sm mt-4 tracking-wide">
           Private Coaching · First Session Free · Beginners Welcome
