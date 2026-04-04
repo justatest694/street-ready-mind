@@ -24,12 +24,15 @@ const HeroSection = () => {
           real-life situations — not sport, not fantasy.
         </p>
 
-        <a
-          href="#contact"
+        <button
+          onClick={() => {
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            window.dispatchEvent(new CustomEvent('open-contact-form'));
+          }}
           className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
         >
           BOOK YOUR SESSION
-        </a>
+        </button>
 
         <p className="text-muted-foreground text-sm mt-4 tracking-wide">
           Private Coaching · First Session Free · Beginners Welcome
