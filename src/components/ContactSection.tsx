@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Mail, Check } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
@@ -42,38 +42,22 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-secondary">
+    <section id="contact" className="py-20 px-4">
       <div className="container mx-auto max-w-2xl text-center">
-        <div className="border-t border-grit mb-12" />
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-gradient-orange">
+          Ready to Train?
+        </h2>
+        <p className="text-muted-foreground mb-8">
+          If you're serious about learning real self defence — let's start.
+        </p>
 
         {!showForm ? (
-          <div className="space-y-6">
-            <button
-              onClick={() => setShowForm(true)}
-              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-2xl tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
-            >
-              Book Your Session
-            </button>
-
-            <div className="flex flex-col items-center gap-2 text-secondary-foreground text-sm">
-              <div className="flex items-center gap-2">
-                <Check size={16} className="text-primary" />
-                <span>No experience needed</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} className="text-primary" />
-                <span>1–2–1 pressure-testing coaching</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} className="text-primary" />
-                <span>Train at your pace</span>
-              </div>
-            </div>
-
-            <p className="font-heading text-3xl text-gradient-orange">
-              £35.00 per hour
-            </p>
-          </div>
+          <button
+            onClick={() => setShowForm(true)}
+            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 mb-10"
+          >
+            BOOK YOUR SESSION NOW
+          </button>
         ) : (
           <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mb-10 text-left space-y-4 animate-fade-in">
             <h3 className="font-heading text-xl font-bold text-foreground">Send Us a Message</h3>
@@ -103,7 +87,7 @@ const ContactSection = () => {
           </form>
         )}
 
-        <div className="flex flex-col items-center gap-3 text-muted-foreground mt-8">
+        <div className="flex flex-col items-center gap-3 text-muted-foreground">
           <div className="flex items-center gap-2">
             <Phone size={16} className="text-primary" />
             <span>Call / WhatsApp: 000-000-0000</span>
