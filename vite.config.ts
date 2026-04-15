@@ -3,9 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+const githubPagesBase = "/street-ready-mind/";
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/street-ready-mind/',
+  base: process.env.GITHUB_ACTIONS ? githubPagesBase : "/",
   server: {
     host: "::",
     port: 8080,
