@@ -55,8 +55,8 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-8 font-body font-light">
-          Practical. Realistic. Pressure-tested self defence training designed for
-          real-life situations — not sport, not fantasy.
+          Practical, realistic, pressure-tested self-defence training designed for
+          real-life violence — not sport, not fantasy.
         </p>
 
         {!showForm ? (
