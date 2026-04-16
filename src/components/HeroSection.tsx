@@ -96,7 +96,7 @@ const HeroSection = () => {
         )}
 
         <p className="text-muted-foreground text-sm mt-4 tracking-wide">
-          Private Coaching · First Session Free · Beginners Welcome
+          No experience needed • 1–2–1 pressure-testing coaching • Train at your pace • £35.00 per hour
         </p>
       </div>
     </section>

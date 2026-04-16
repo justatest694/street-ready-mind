@@ -52,12 +52,17 @@ const ContactSection = () => {
         </p>
 
         {!showForm ? (
-          <button
-            onClick={() => setShowForm(true)}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105 mb-10"
-          >
-            BOOK YOUR SESSION NOW
-          </button>
+          <>
+            <button
+              onClick={() => setShowForm(true)}
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
+            >
+              BOOK YOUR SESSION NOW
+            </button>
+            <p className="text-muted-foreground text-sm mt-4 tracking-wide mb-10">
+              No experience needed • 1–2–1 pressure-testing coaching • Train at your pace • £35.00 per hour
+            </p>
+          </>
         ) : (
           <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mb-10 text-left space-y-4 animate-fade-in">
             <h3 className="font-heading text-xl font-bold text-foreground">Send Us a Message</h3>
