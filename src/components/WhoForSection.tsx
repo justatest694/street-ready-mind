@@ -1,54 +1,42 @@
-const targets = [
-  "Beginners who want real confidence",
-  "People who feel unsafe walking alone",
-  "Professionals who want practical defence skills",
-  "Anyone who wants to be prepared — not paranoid",
-];
+import { Check } from "lucide-react";
 
-const builds = [
-  "Situational awareness",
-  "Calmness under pressure",
-  "Effective striking fundamentals",
-  "Close-range defence skills",
-  "Mental resilience",
-  "Real confidence",
+const features = [
+  "Complete beginners",
+  "People who want real-world confidence",
+  "Anyone who knows deep down their current training isn't enough",
+  "Those who want to feel in control — not helpless — in unpredictable situations",
 ];
 
 const WhoForSection = () => {
   return (
     <section className="py-20 px-4">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-3xl">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4 text-gradient-orange">
-          Who This Is For
+          WHO THIS IS FOR
         </h2>
-        <p className="text-center text-muted-foreground mb-10">
-          You don't need experience. You just need commitment.
+        <p className="text-center font-heading text-xl md:text-2xl font-semibold text-foreground mb-10">
+          No experience? Perfect.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          <ul className="space-y-3">
-            {targets.map((t) => (
-              <li key={t} className="flex items-start gap-3 text-secondary-foreground">
-                <span className="text-primary mt-0.5">●</span>
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="border-t border-grit mb-10" />
 
-          <div>
-            <h3 className="font-heading text-xl font-bold text-foreground mb-4">
-              What You'll Build
-            </h3>
-            <ul className="space-y-2">
-              {builds.map((b) => (
-                <li key={b} className="flex items-center gap-3 text-secondary-foreground">
-                  <span className="text-primary">✔</span>
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="space-y-6 text-secondary-foreground font-body text-base md:text-lg leading-relaxed text-center">
+          <p>
+            We start from zero — building a solid foundation of movement, awareness, and tactical thinking.
+          </p>
+          <p>
+            This isn't about being the toughest person in the room. It's about becoming capable, composed, and prepared.
+          </p>
         </div>
+
+        <ul className="mt-10 space-y-4 max-w-xl mx-auto">
+          {features.map((f) => (
+            <li key={f} className="flex items-start gap-3 text-secondary-foreground">
+              <Check className="text-primary mt-1 shrink-0" size={18} />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
