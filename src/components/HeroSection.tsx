@@ -40,12 +40,36 @@ const HeroSection = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ backgroundColor: "#000000" }}
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          WebkitMaskImage:
+            "radial-gradient(ellipse 70% 75% at 50% 60%, black 35%, transparent 95%)",
+          maskImage:
+            "radial-gradient(ellipse 70% 75% at 50% 60%, black 35%, transparent 95%)",
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+        }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+      {/* Top fade into navbar */}
+      <div
+        className="absolute inset-x-0 top-0 h-40 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, #000000 0%, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0) 100%)",
+        }}
+      />
+      {/* Bottom fade into next section */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to top, #000000 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%)",
+        }}
+      />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
