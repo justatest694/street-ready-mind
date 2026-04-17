@@ -2,7 +2,7 @@ import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from "lucide-react";
+
 import { useToast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
@@ -96,10 +96,6 @@ const HeroSection = () => {
             <Input name="name" placeholder="Your Name" required className="bg-background" />
             <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
             <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
-            <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t border-border">
-              <Mail size={14} className="text-primary" />
-              <span>This will be sent to: email@</span>
-            </div>
             <div className="flex gap-3">
               <button
                 type="submit"
@@ -119,8 +115,8 @@ const HeroSection = () => {
           </form>
         )}
 
-        <p className="text-muted-foreground text-sm mt-4 tracking-wide">
-          No experience needed • 1–2–1 pressure-testing coaching • Train at your pace • £35.00 per hour
+        <p className="text-foreground font-heading text-base md:text-lg font-bold tracking-wide mt-5 mb-8">
+          Private 1–2–1 Pressure-Test Coaching
         </p>
       </div>
     </section>
