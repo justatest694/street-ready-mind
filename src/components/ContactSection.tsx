@@ -59,20 +59,16 @@ const ContactSection = () => {
             >
               BOOK YOUR SESSION NOW
             </button>
-            <p className="text-muted-foreground text-sm mt-4 tracking-wide mb-10">
-              No experience needed • 1–2–1 pressure-testing coaching • Train at your pace • £35.00 per hour
+            <p className="text-foreground font-heading text-base md:text-lg font-bold tracking-wide mt-5 mb-12">
+              Private 1–2–1 Pressure-Test Coaching
             </p>
           </>
         ) : (
-          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mb-10 text-left space-y-4 animate-fade-in">
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mt-6 mb-12 text-left space-y-4 animate-fade-in">
             <h3 className="font-heading text-xl font-bold text-foreground">Send Us a Message</h3>
             <Input name="name" placeholder="Your Name" required className="bg-background" />
             <Input name="email" type="email" placeholder="Your Email" required className="bg-background" />
             <Textarea name="message" placeholder="What would you like to say?" rows={5} required className="bg-background" />
-            <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t border-border">
-              <Mail size={14} className="text-primary" />
-              <span>This will be sent to: email@</span>
-            </div>
             <div className="flex gap-3">
               <button
                 type="submit"
@@ -96,10 +92,6 @@ const ContactSection = () => {
           <div className="flex items-center gap-2">
             <Phone size={16} className="text-primary" />
             <span>Call / WhatsApp: 000-000-0000</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail size={16} className="text-primary" />
-            <span>Email: email@</span>
           </div>
         </div>
       </div>
