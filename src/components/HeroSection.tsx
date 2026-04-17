@@ -119,8 +119,8 @@ const HeroSection = () => {
           </form>
         )}
 
-        <p className="text-muted-foreground text-sm mt-4 tracking-wide">
-          No experience needed • 1–2–1 pressure-testing coaching • Train at your pace • £35.00 per hour
+        <p className="text-foreground font-heading text-base md:text-lg font-bold tracking-wide mt-5 mb-8">
+          Private 1–2–1 Pressure-Test Coaching
         </p>
       </div>
     </section>
