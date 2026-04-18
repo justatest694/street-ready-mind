@@ -20,7 +20,7 @@ const Navbar = () => {
         <img
           src={banner}
           alt="LS Street MMA"
-          className="block h-auto w-auto max-h-20 max-w-full object-contain"
+          className="block w-full h-auto max-h-28 object-contain"
           style={featherMask}
         />
       </div>
