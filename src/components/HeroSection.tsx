@@ -114,13 +114,13 @@ const HeroSection = () => {
               BOOK YOUR SESSION
             </button>
 
-            <ul className="mt-10 mb-4 max-w-md mx-auto text-left space-y-5">
+            <ul className="mt-6 mb-2 max-w-md mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-left">
               {bookingFeatures.map((f) => (
                 <li
                   key={f}
-                  className="flex items-start gap-3 text-foreground text-lg md:text-xl leading-relaxed"
+                  className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm leading-snug"
                 >
-                  <Check className="text-primary mt-1 shrink-0" size={22} strokeWidth={3} />
+                  <Check className="text-primary shrink-0" size={14} strokeWidth={3} />
                   <span>{f}</span>
                 </li>
               ))}
