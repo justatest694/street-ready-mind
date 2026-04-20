@@ -7,10 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const bookingFeatures = [
-  "Private 1-2-1 pressure-test coaching",
-  "Real-world scenario drills",
-  "Knife threat awareness",
-  "Free initial session",
+  "No experience needed",
+  "1–2–1 pressure-testing coaching",
+  "Train at your pace",
+  "Knife threat awareness & defence principles",
 ];
 
 const HeroSection = () => {
