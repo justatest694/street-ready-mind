@@ -7,10 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const bookingFeatures = [
-  "Private 1-2-1 pressure-test coaching",
-  "Real-world scenario drills",
-  "Knife threat awareness",
-  "Free initial session",
+  "No experience needed",
+  "1–2–1 pressure-testing coaching",
+  "Train at your pace",
+  "Knife threat awareness & defence principles",
 ];
 
 const HeroSection = () => {
@@ -114,13 +114,13 @@ const HeroSection = () => {
               BOOK YOUR SESSION
             </button>
 
-            <ul className="mt-6 mb-2 max-w-md mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-left">
+            <ul className="mt-6 mb-2 max-w-md mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
               {bookingFeatures.map((f) => (
                 <li
                   key={f}
-                  className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm leading-snug"
+                  className="flex items-start gap-2 text-foreground text-xs leading-snug"
                 >
-                  <Check className="text-primary shrink-0" size={14} strokeWidth={3} />
+                  <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
                   <span>{f}</span>
                 </li>
               ))}
