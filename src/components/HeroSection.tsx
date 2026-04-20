@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import { useToast } from "@/hooks/use-toast";
+
+const bookingFeatures = [
+  "Private 1-2-1 pressure-test coaching",
+  "Real-world scenario drills",
+  "Knife threat awareness",
+  "Free initial session",
+];
 
 const HeroSection = () => {
   const [showForm, setShowForm] = useState(false);
