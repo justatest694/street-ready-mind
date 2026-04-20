@@ -150,10 +150,6 @@ const HeroSection = () => {
             </div>
           </form>
         )}
-
-        <p className="text-foreground font-heading text-base md:text-lg font-bold tracking-wide mt-5 mb-8">
-          Private 1–2–1 Pressure-Test Coaching
-        </p>
       </div>
     </section>
   );
