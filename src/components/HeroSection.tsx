@@ -79,6 +79,15 @@ const HeroSection = () => {
         }}
       />
 
+      {/* Radial focal glow behind CTA */}
+      <div
+        className="absolute inset-x-0 bottom-0 top-1/3 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 50% 55% at 50% 75%, hsl(27 100% 50% / 0.18) 0%, hsl(27 100% 50% / 0.06) 35%, transparent 70%)",
+        }}
+      />
+
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
           <span className="text-gradient-orange">Learn How to Defend Yourself</span>
@@ -92,12 +101,31 @@ const HeroSection = () => {
         </p>
 
         {!showForm ? (
-          <button
-            onClick={() => setShowForm(true)}
-            className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-lg tracking-widest px-10 py-4 rounded transition-all glow-orange hover:scale-105"
-          >
-            BOOK YOUR SESSION
-          </button>
+          <>
+            <button
+              onClick={() => setShowForm(true)}
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-heading text-xl md:text-2xl font-bold tracking-[0.18em] uppercase px-12 py-5 rounded transition-all hover:scale-105"
+              style={{
+                boxShadow:
+                  "0 0 0 1px hsl(27 100% 45% / 0.6), 0 10px 30px hsl(0 0% 0% / 0.7), 0 0 60px hsl(27 100% 50% / 0.45), 0 0 120px hsl(27 100% 50% / 0.25)",
+                textShadow: "0 1px 2px hsl(0 0% 0% / 0.35)",
+              }}
+            >
+              BOOK YOUR SESSION
+            </button>
+
+            <ul className="mt-10 mb-4 max-w-md mx-auto text-left space-y-5">
+              {bookingFeatures.map((f) => (
+                <li
+                  key={f}
+                  className="flex items-start gap-3 text-foreground text-lg md:text-xl leading-relaxed"
+                >
+                  <Check className="text-primary mt-1 shrink-0" size={22} strokeWidth={3} />
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </>
         ) : (
           <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-6 mb-4 text-left space-y-4 animate-fade-in max-w-lg mx-auto">
             <h3 className="font-heading text-xl font-bold text-foreground">Send Us a Message</h3>
