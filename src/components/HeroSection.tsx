@@ -52,14 +52,14 @@ const HeroSection = () => {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      {/* Vignette overlay for readability */}
+      <div
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${heroBg})`,
-          WebkitMaskImage:
-            "radial-gradient(ellipse 70% 75% at 50% 60%, black 35%, transparent 95%)",
-          maskImage:
-            "radial-gradient(ellipse 70% 75% at 50% 60%, black 35%, transparent 95%)",
-          WebkitMaskRepeat: "no-repeat",
-          maskRepeat: "no-repeat",
+          background:
+            "radial-gradient(ellipse 90% 80% at 50% 50%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.95) 100%)",
         }}
       />
       {/* Top fade into navbar */}
