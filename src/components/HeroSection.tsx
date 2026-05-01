@@ -89,15 +89,26 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-          <span className="text-gradient-orange">Learn How to Defend Yourself</span>
+        <h1 className="font-heading uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] mb-4 tracking-tight">
+          <span className="text-foreground">Could You</span>
           <br />
-          <span className="text-foreground">in the Real World</span>
+          <span className="text-gradient-orange">Defend Yourself</span>
+          <br />
+          <span className="text-foreground">In A Real Street Situation?</span>
         </h1>
 
-        <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-8 font-body font-light">
-          Practical, realistic, pressure-tested self-defence training designed for
-          real-life violence — not sport, not fantasy.
+        <p className="text-foreground/90 text-lg md:text-xl font-body mb-10">
+          Most people can't.
+        </p>
+
+        <h2 className="font-heading uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.05] mb-5 tracking-tight">
+          <span className="text-gradient-orange">Learn How to Defend Yourself</span>
+          <br />
+          <span className="text-foreground">In The Real World</span>
+        </h2>
+
+        <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto mb-8 font-body">
+          <span className="text-foreground font-semibold">Practical. Realistic.</span> Pressure-tested self defence training designed for <span className="text-foreground font-semibold">real-life violence</span> — not sport, not fantasy.
         </p>
 
         {!showForm ? (
