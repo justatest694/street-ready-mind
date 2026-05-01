@@ -89,25 +89,25 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
-        <h1 className="font-heading uppercase font-bold leading-[1.02] mb-4 tracking-tight">
-          <span className="block text-foreground text-3xl sm:text-4xl md:text-5xl">Could You</span>
-          <span className="block text-gradient-orange text-5xl sm:text-6xl md:text-7xl lg:text-8xl my-1">
+        <h1 className="font-heading uppercase font-bold leading-[1.05] mb-3 tracking-wide">
+          <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl tracking-[0.08em]">Could You</span>
+          <span className="block text-gradient-orange text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.04em] my-0.5">
             Defend Yourself
           </span>
-          <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl">
+          <span className="block text-foreground text-xl sm:text-2xl md:text-3xl tracking-[0.08em]">
             In A Real Street Situation?
           </span>
         </h1>
 
-        <p className="text-foreground/90 text-lg md:text-xl font-body mb-10">
+        <p className="text-foreground/90 text-base md:text-lg font-body mb-8">
           Most people can't.
         </p>
 
-        <h2 className="font-heading uppercase font-bold leading-[1.05] mb-5 tracking-tight">
-          <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <h2 className="font-heading uppercase font-bold leading-[1.05] mb-5 tracking-wide">
+          <span className="block text-gradient-orange text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-[0.04em]">
             Learn How To Defend Yourself
           </span>
-          <span className="block text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
             In The Real World
           </span>
         </h2>
