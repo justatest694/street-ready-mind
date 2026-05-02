@@ -16,7 +16,15 @@ const bookingFeatures = [
 const HeroSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+
+  const handleOpenForm = () => {
+    setShowForm(true);
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 50);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
