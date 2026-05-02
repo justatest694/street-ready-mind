@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Input } from "@/components/ui/input";
