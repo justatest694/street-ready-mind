@@ -59,10 +59,10 @@ const ContactSection = () => {
             >
               BOOK YOUR SESSION NOW
             </button>
-            <ul className="mt-6 mb-12 max-w-md mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
+            <ul className="mt-6 mb-12 max-w-2xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
               {[
                 "No experience needed",
-                "1–2–1 pressure-tested coaching / £35 an hour",
+                "1–2–1 pressure tested coaching | £35 p/h",
                 "Train at your pace",
                 "Knife threat awareness & defence principles",
               ].map((f) => (
@@ -71,7 +71,7 @@ const ContactSection = () => {
                   className="flex items-start gap-2 text-foreground text-xs leading-snug"
                 >
                   <Check className="text-primary shrink-0 mt-0.5" size={14} strokeWidth={3} />
-                  <span>{f}</span>
+                  <span className="whitespace-nowrap">{f}</span>
                 </li>
               ))}
             </ul>
