@@ -62,7 +62,7 @@ const ContactSection = () => {
             <ul className="mt-6 mb-12 max-w-md mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 text-left">
               {[
                 "No experience needed",
-                "1–2–1 pressure-testing coaching",
+                "1–2–1 pressure-tested coaching",
                 "Train at your pace",
                 "Knife threat awareness & defence principles",
               ].map((f) => (
