@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Phone, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,10 +7,18 @@ import { useToast } from "@/hooks/use-toast";
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
   const [sending, setSending] = useState(false);
+  const formRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
+  const openForm = () => {
+    setShowForm(true);
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 50);
+  };
+
   useEffect(() => {
-    const handler = () => setShowForm(true);
+    const handler = () => openForm();
     window.addEventListener('open-contact-form', handler);
     return () => window.removeEventListener('open-contact-form', handler);
   }, []);
