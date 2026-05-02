@@ -103,11 +103,11 @@ const HeroSection = () => {
           Most people can't.
         </p>
 
-        <h2 className="font-heading uppercase font-bold leading-[1.05] mb-5 tracking-wide">
-          <span className="block text-gradient-orange text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-[0.04em]">
-            Learn How To Defend Yourself
+        <h2 className="font-heading font-bold leading-[1.05] mb-5 tracking-wide">
+          <span className="block text-gradient-orange text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.02em] normal-case" style={{ textTransform: "none" }}>
+            Learn How to Defend Yourself
           </span>
-          <span className="block text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
+          <span className="block text-foreground uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.06em]">
             In The Real World
           </span>
         </h2>
